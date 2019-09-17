@@ -3,4 +3,4 @@
 out/*
 *.class
 .DS_Store
-src/Test
+src/Test.java
