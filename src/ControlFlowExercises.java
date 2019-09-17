@@ -1,17 +1,19 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main (String[] args){
 
-        for (byte i = 1; i <=100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
+        Scanner input = new Scanner(System.in);
+        System.out.println("ENTER A NUMBER!!!");
+        boolean keepGoing = true;
+        int inputNumber = input.nextInt();
+        int i = 1;
+        while (keepGoing && i <= inputNumber) {
+            System.out.println(i + ": Squared is: " + (i * i) + " Cubed is: " + (i * i * i));
+            i++;
+            System.out.println("Continue?");
+            keepGoing = input.nextBoolean();
         }
 
     }
