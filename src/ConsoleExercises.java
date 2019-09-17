@@ -11,22 +11,18 @@ public class ConsoleExercises {
         System.out.println("Enter an integer:");
         int newInt = input.nextInt();
         System.out.println("You entered " + newInt);
-        System.out.println("Enter word one:");
+        System.out.println("Enter three words:");
         String wordOne = input.next();
-        System.out.println("Enter word two:");
         String wordTwo = input.next();
-        System.out.println("Enter word three:");
         String wordThree = input.next();
         System.out.println(wordOne + " " + wordTwo + " " + wordThree);
         System.out.println("Enter a sentence:");
-        String userSentence = input.nextLine();
-        System.out.println(userSentence);
-        System.out.println("Enter the room's length:");
-        double length = Double.parseDouble(input.nextLine());
-        System.out.println("Enter the room's width:");
-        double width = Double.parseDouble(input.nextLine());
-        System.out.println("Enter the room's height:");
-        double height = Double.parseDouble((input.nextLine()));
+        String userSentence = input.next();
+        System.out.println("You entered: " + userSentence);
+        System.out.println("Enter the room's length followed by width followed by height:");
+        double length = input.nextDouble();
+        double width = input.nextDouble();
+        double height = input.nextDouble();
         System.out.println("The area of the room is " + (length * width) + " and the perimeter is " + (width + width + length + length) + " and the volume is " + (width * height * length) + ".");
 
 
