@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class ExtraMethodsExercises {
 
@@ -6,9 +8,7 @@ public class ExtraMethodsExercises {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println(countVowels("test"));
-        System.out.println(countCapLetters("TeStInG"));
-
+        System.out.println(isPalindrome("racecar"));
 
     }
 
@@ -86,6 +86,56 @@ public class ExtraMethodsExercises {
             }
         }
         return count;
+    }
+
+    public static String getType(double input){
+        return "This be a double";
+    }
+
+    public static String getType(int input){
+        return "This be an integer";
+    }
+
+    public static String getType(char input){
+        return "This be a char";
+    }
+
+    public static String getType(String input){
+        return "This be a string";
+    }
+
+    public static String getType(boolean input){
+        return "This be a boolean";
+    }
+
+    public static void allTheLetters(String word){
+        int wordLength = word.length();
+        int count = 0;
+        System.out.println(word.charAt(count));
+        count++;
+        if(count < wordLength){
+            allTheLetters(word, count);
+        }
+    }
+
+    public static void allTheLetters(String word, int num){
+        int wordLength = word.length();
+        int count = num;
+        System.out.println(word.charAt(count));
+        count++;
+        if(count < wordLength){
+            allTheLetters(word, count);
+        }
+    }
+
+    public static boolean isPalindrome(String word){
+        String reverseWord = "";
+        char[] try1 = word.toCharArray();
+
+        for (int i = try1.length-1; i>=0; i--) {
+            reverseWord += try1[i];
+        }
+        return word.equalsIgnoreCase(reverseWord);
     }
 
 
