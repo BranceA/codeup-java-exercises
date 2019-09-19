@@ -68,7 +68,6 @@ public class MethodsExercises {
             System.out.println("Try again bro.");
             return getInteger(min, max);
         }else {
-            System.out.println("Good work. You did it.");
             return userInput;
         }
 
