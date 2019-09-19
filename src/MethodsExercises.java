@@ -84,21 +84,21 @@ public class MethodsExercises {
 
         String keepGoing = "y";
 
-        while (keepGoing.equalsIgnoreCase("y")) {
-
-            int userInput = getInteger(1, 10);
-
-            String output = "";
-
-            for (int i = 1; i <= userInput; i++) {
-                output += getFactorials(i);
-            }
-            System.out.println(output);
-            System.out.println("Keep Going? Y/N");
-            keepGoing = input.nextLine();
+        int userInput = getInteger(1, 10);
+        String output = "";
+        for (int i = 1; i <= userInput; i++) {
+            output += getFactorials(i);
         }
+        System.out.println(output);
+        System.out.println("Keep Going? Y/N");
+        keepGoing = input.nextLine();
 
-        return "";
+        if(keepGoing.equalsIgnoreCase("y")){
+            getFactorials();
+        }else {
+            System.out.println("Later");
+        }
+            return "";
     }
 
     public static String getFactorials(int num){
