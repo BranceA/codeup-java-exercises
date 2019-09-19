@@ -7,15 +7,15 @@ public class MethodsExercises {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println(sumOfNums(4, 9));
-        System.out.println(subtractNums(8, 2));
-        System.out.println(iKnowWhatProductMeans(4, 7));
-        System.out.println(divideNums(20, 5));
-        System.out.println(whatIsModulus(10, 3));
-        System.out.println(iDontKnowWhatProductMeans(1, 7));
+//        System.out.println(sumOfNums(4, 9));
+//        System.out.println(subtractNums(8, 2));
+//        System.out.println(iKnowWhatProductMeans(4, 7));
+//        System.out.println(divideNums(20, 5));
+//        System.out.println(whatIsModulus(10, 3));
+//        System.out.println(iDontKnowWhatProductMeans(1, 7));
 //        getInteger(1, 10);
-//        System.out.println(getFactorials());
-        rollDice();
+        getFactorials();
+//        rollDice();
 
     }
 
@@ -63,9 +63,15 @@ public class MethodsExercises {
     public static int getInteger(int min, int max){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number between " + min + " and " + max + ": ");
-        int userInput = input.nextInt();
+        int userInput;
+        if(input.hasNextInt()){
+            userInput = input.nextInt();
+        } else {
+            System.out.println("Invalid input. Try again bro.");
+            return getInteger(min, max);
+        }
         if (userInput < min || userInput > max){
-            System.out.println("Try again bro.");
+            System.out.println("Invalid range. Try again bro.");
             return getInteger(min, max);
         }else {
             return userInput;
@@ -74,21 +80,31 @@ public class MethodsExercises {
     }
 
     public static String getFactorials(){
+        Scanner input = new Scanner(System.in);
 
-        int userInput = getInteger(1, 10);
+        String keepGoing = "y";
 
-        String output = "";
+        while (keepGoing.equalsIgnoreCase("y")) {
 
-        for (int i = 1; i <= userInput; i++){
-            output += getFactorials(i);
+            int userInput = getInteger(1, 10);
+
+            String output = "";
+
+            for (int i = 1; i <= userInput; i++) {
+                output += getFactorials(i);
+            }
+            System.out.println(output);
+            System.out.println("Keep Going? Y/N");
+            keepGoing = input.nextLine();
         }
-        return output;
+
+        return "";
     }
 
     public static String getFactorials(int num){
         String output = num + "! = ";
-        int fact = 1;
-        for (int i = num; i > 0; i--){
+        long fact = 1L;
+        for (int i = 1; i <= num; i++){
             output += " X " + i;
             fact *= i;
         }
