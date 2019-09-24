@@ -8,7 +8,7 @@ public class ExtraMethodsExercises {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println(isPalindrome("racecar"));
+        commandLineCalculator();
 
     }
 
@@ -138,6 +138,71 @@ public class ExtraMethodsExercises {
         return word.equalsIgnoreCase(reverseWord);
     }
 
+    public static void commandLineCalculator(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int firstNumber = 0;
+        if(input.hasNextInt()) {
+            firstNumber = input.nextInt();
+            commandLineCalculator(firstNumber);
+        } else {
+            System.out.println("That is not a number. Try again.");
+            commandLineCalculator();
+        }
 
+    }
+
+    public static void commandLineCalculator(int firstNumber){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an operator");
+        String operatorType = input.nextLine();
+        if(operatorType.contains("+") || operatorType.contains("-") || operatorType.contains("*") || operatorType.contains("/") || operatorType.contains("%")) {
+            operatorType = input.nextLine();
+            commandLineCalculator(firstNumber, operatorType);
+        } else{
+            System.out.println("That is not an operator. Try again");
+            commandLineCalculator(firstNumber);
+        }
+
+    }
+
+    public static void commandLineCalculator(int firstNumber, String operatorType){
+        Scanner input = new Scanner(System.in);
+        int secondNumber;
+        System.out.println("Enter your second number.");
+        if(input.hasNextInt()) {
+            secondNumber = input.nextInt();
+            commandLineCalculator(firstNumber, operatorType, secondNumber);
+        } else {
+            System.out.println("That is not a number. Try again.");
+            commandLineCalculator(firstNumber, operatorType);
+        }
+    }
+
+    public static int commandLineCalculator(int firstNumber, String operatorType, int secondNumber){
+        int answer = 0;
+        switch(operatorType){
+            case("+"):
+                answer = firstNumber + secondNumber;
+            break;
+            case("-"):
+                answer = firstNumber - secondNumber;
+            break;
+            case("*"):
+                answer = firstNumber * secondNumber;
+            break;
+            case("/"):
+                answer = firstNumber / secondNumber;
+            break;
+            case("%"):
+                answer = firstNumber % secondNumber;
+            break;
+        }
+
+        System.out.println(answer);
+
+        return answer;
+
+    }
 
 }

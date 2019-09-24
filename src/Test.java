@@ -26,8 +26,23 @@ public class Test {
 //            System.out.println(word);
 //        }
 
-        countToHundred(1);
+//        countToHundred(1);
 
+//        test();
+
+//        fizzBuzz("");
+
+        Person dude = Person.main("Chuck");
+
+        System.out.println(dude.getName());
+        dude.sayHello();
+
+
+    }
+
+    public static void test() {
+        int x = 5 * 4 % 3;
+        System.out.println(x);
     }
 
 
@@ -38,6 +53,34 @@ public class Test {
             return 0;
         }
         return countToHundred(i);
+    }
+
+    public static void fizzBuzz(String currentOutput){
+
+        if(((currentOutput.split("\r\n|\r|\n").length) % 3 != 0) && ((currentOutput.split("\r\n|\r|\n").length) % 5 != 0)) {
+            currentOutput += (currentOutput.split("\r\n|\r|\n").length) + "\n";
+            fizzBuzz(currentOutput);
+            return;
+        }
+
+        if((currentOutput.split("\r\n|\r|\n").length) % 3 == 0){
+            currentOutput += "Fizz";
+        }
+
+        if((((currentOutput.split("\r\n|\r|\n").length) % 5 == 0) && (currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("\n"))) || ((((currentOutput.split("\r\n|\r|\n").length) % 5 == 1)) && ((currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("z"))))){
+            currentOutput += "Buzz";
+        }
+
+        if((currentOutput.split("\r\n|\r|\n").length) <= 100) {
+            currentOutput += "\n";
+            fizzBuzz(currentOutput);
+        }
+
+        if ((currentOutput.split("\r\n|\r|\n").length) == 101) {
+            currentOutput = currentOutput.substring(2);
+            System.out.println(currentOutput);
+        }
+
     }
 
 }
