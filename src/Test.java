@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import util.Input;
 
 public class Test {
 
@@ -32,11 +33,20 @@ public class Test {
 
 //        fizzBuzz("");
 
-        Person dude = Person.main("Chuck");
+        Person dude = new Person("Chuck");
 
-        System.out.println(dude.getName());
-        dude.sayHello();
+        Input thisInput = new Input();
 
+//        String testThisOut = thisInput.getString();
+//        System.out.println(testThisOut);
+//        boolean moreTesting = thisInput.yesNo();
+//        System.out.println(moreTesting);
+//        int testingIntMethod = thisInput.getInt(1, 10);
+//        System.out.println(testingIntMethod);
+//        System.out.println(thisInput.getInt());
+
+        System.out.println(thisInput.getDouble());
+        System.out.println(thisInput.getDouble(3, 9));
 
     }
 

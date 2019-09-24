@@ -16,10 +16,5 @@ public class Person {
         setName(name);
     }
 
-    public static Person main(String name) {
-
-        return new Person(name);
-
-    }
 
 }
