@@ -24,18 +24,19 @@ public class Input {
 
     public int getInt(int min, int max) {
         System.out.print("Enter a number between " + min + " and " + max + ": ");
-        int userInput;
-        if(scanner.hasNextInt()){
-            userInput = Integer.parseInt(scanner.nextLine());
+        String userInput = scanner.nextLine();
+        int userInt;
+        if(userInput.matches(".*\\d.*")){
+            userInt = Integer.parseInt(userInput);
         } else {
             System.out.println("That's an invalid input. Try again.");
             return getInt(min, max);
         }
-        if (userInput < min || userInput > max){
+        if (userInt < min || userInt > max){
             System.out.println("That's an invalid range. Try again.");
             return getInt(min, max);
         }else {
-            return userInput;
+            return userInt;
         }
 
     }
