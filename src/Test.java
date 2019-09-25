@@ -33,9 +33,9 @@ public class Test {
 
 //        fizzBuzz("");
 
-        Person dude = new Person("Chuck");
+//        Person dude = new Person("Chuck");
 
-        Input thisInput = new Input();
+//        Input thisInput = new Input();
 
 //        String testThisOut = thisInput.getString();
 //        System.out.println(testThisOut);
@@ -45,10 +45,23 @@ public class Test {
 //        System.out.println(testingIntMethod);
 //        System.out.println(thisInput.getInt());
 
-        System.out.println(thisInput.getDouble());
-        System.out.println(thisInput.getDouble(3, 9));
+//        System.out.println(thisInput.getDouble());
+//        System.out.println(thisInput.getDouble(3, 9));
+
+        names[0] = "Brance";
+        names[1] = "Alexander";
+        names[2] = "Chris";
+        names[3] = "Brunch";
+
+        System.out.println(names[2]);
+
+        for(String name : names){
+            System.out.println(name.equalsIgnoreCase("chris"));
+        }
 
     }
+
+    static String[] names = new String[4];
 
     public static void test() {
         int x = 5 * 4 % 3;

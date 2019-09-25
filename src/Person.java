@@ -1,20 +1,17 @@
 public class Person {
 
-    private String name;
+    private String firstName;
+    private String lastName;
     public String getName() {
-        return name;
+        return firstName + " " + lastName;
     }
-    public void setName(String newName){
-        name = newName;
-    }
-
-    public void sayHello(){
-        System.out.format("Hello there %s!", name);
+    public Person(String fN, String lN){
+        this.firstName = fN;
+        this.lastName = lN;
     }
 
-    Person(String name){
-        setName(name);
+    public String sayHello(){
+        return String.format("Hello from %s %s!", firstName, lastName);
     }
-
 
 }
