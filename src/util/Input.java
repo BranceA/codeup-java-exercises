@@ -42,8 +42,9 @@ public class Input {
     }
 
     public int getInt() {
-        if(scanner.hasNextInt()){
-            return scanner.nextInt();
+        String userInput = scanner.nextLine();
+        if(userInput.matches(".*\\d.*")){
+            return Integer.parseInt(userInput);
         } else {
             System.out.println("That isn't an integer. Try again.");
             return getInt();
@@ -53,24 +54,26 @@ public class Input {
 
     public double getDouble(double min, double max) {
         System.out.print("Enter a double between " + min + " and " + max + ": ");
-        double userInput;
-        if(scanner.hasNextDouble()){
-            userInput = scanner.nextDouble();
+        String userInput = scanner.nextLine();
+        double userDouble;
+        if(userInput.matches(".*\\d.*")){
+            userDouble = Double.parseDouble(userInput);
         } else {
             System.out.println("That's an invalid input. Try again.");
             return getDouble(min, max);
         }
-        if (userInput < min || userInput > max){
+        if (userDouble < min || userDouble > max){
             System.out.println("That's an invalid range. Try again.");
             return getDouble(min, max);
         }else {
-            return userInput;
+            return userDouble;
         }
     }
 
     public double getDouble() {
-        if(scanner.hasNextDouble()){
-            return scanner.nextDouble();
+        String userInput = scanner.nextLine();
+        if(userInput.matches(".*\\d.*")){
+            return Double.parseDouble(userInput);
         } else {
             System.out.println("That isn't a double. Try again.");
             return getDouble();
