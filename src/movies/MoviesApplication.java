@@ -59,7 +59,7 @@ public class MoviesApplication {
                 System.out.println("You have added your movie.");
             }
 
-            System.out.println("Keep Going?");
+            System.out.println("Keep Going? Y/N");
             keepGoing = userInput.yesNo();
         }while (keepGoing);
 
