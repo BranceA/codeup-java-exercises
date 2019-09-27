@@ -10,8 +10,6 @@ public class Rectangle {
         this.width = width;
     }
 
-    public Rectangle(){}
-
     public int getPerimeter(){
         return (2 * this.length) + (2 * this.width);
     }

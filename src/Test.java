@@ -31,7 +31,7 @@ public class Test {
 
 //        test();
 
-//        fizzBuzz("");
+        fizzBuzz("");
 
 //        Person dude = new Person("Chuck");
 
@@ -48,16 +48,16 @@ public class Test {
 //        System.out.println(thisInput.getDouble());
 //        System.out.println(thisInput.getDouble(3, 9));
 
-        names[0] = "Brance";
-        names[1] = "Alexander";
-        names[2] = "Chris";
-        names[3] = "Brunch";
-
-        System.out.println(names[2]);
-
-        for(String name : names){
-            System.out.println(name.equalsIgnoreCase("chris"));
-        }
+//        names[0] = "Brance";
+//        names[1] = "Alexander";
+//        names[2] = "Chris";
+//        names[3] = "Brunch";
+//
+//        System.out.println(names[2]);
+//
+//        for(String name : names){
+//            System.out.println(name.equalsIgnoreCase("chris"));
+//        }
 
     }
 
