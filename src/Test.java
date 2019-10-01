@@ -81,16 +81,14 @@ public class Test {
     public static void fizzBuzz(String currentOutput){
 
         if(((currentOutput.split("\r\n|\r|\n").length) % 3 != 0) && ((currentOutput.split("\r\n|\r|\n").length) % 5 != 0)) {
-            currentOutput += (currentOutput.split("\r\n|\r|\n").length) + "\n";
-            fizzBuzz(currentOutput);
-            return;
+            currentOutput += (currentOutput.split("\r\n|\r|\n").length);
         }
 
-        if((currentOutput.split("\r\n|\r|\n").length) % 3 == 0){
+        if((currentOutput.split("\r\n|\r|\n").length) % 3 == 0 && !Character.isDigit((currentOutput.charAt(currentOutput.length() - 1)))){
             currentOutput += "Fizz";
         }
 
-        if((((currentOutput.split("\r\n|\r|\n").length) % 5 == 0) && (currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("\n"))) || ((((currentOutput.split("\r\n|\r|\n").length) % 5 == 1)) && ((currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("z"))))){
+        if((((currentOutput.split("\r\n|\r|\n").length) % 5 == 0) && (currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("\n")) && !Character.isDigit((currentOutput.charAt(currentOutput.length() - 1)))) || ((((currentOutput.split("\r\n|\r|\n").length) % 5 == 1)) && ((currentOutput.substring(currentOutput.length() - 1).equalsIgnoreCase("z"))))){
             currentOutput += "Buzz";
         }
 

@@ -6,7 +6,7 @@ public class Iphone extends Phone {
         super(sS, "iOS");
     }
 
-    protected boolean facialUnlock(String face){
+    public boolean facialUnlock(String face){
         return true;
     }
 

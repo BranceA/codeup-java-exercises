@@ -6,6 +6,18 @@ public class GroceryListItem {
     public int quantity;
     public String category;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public GroceryListItem(){
         Input thisInput = new Input();
         System.out.println("What is the name of the item?");
@@ -14,6 +26,8 @@ public class GroceryListItem {
         quantity = thisInput.getInt();
         System.out.println("What category would you give this item?");
         category = thisInput.getString();
+
+
     }
 
 }
