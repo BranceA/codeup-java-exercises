@@ -41,6 +41,20 @@ public class Input {
 
     }
 
+//    public int getInt(int min, int max) throws Exception {
+//        System.out.print("Enter a number between " + min + " and " + max + ": ");
+//        String userInput = scanner.nextLine();
+//        if(!userInput.matches(".*\\d.*")){
+//            throw new Exception("That is not an integer.");
+//        }
+//        int userInt = Integer.parseInt(userInput);
+//        if (userInt < min || userInt > max){
+//            throw new Exception("That is not in range.");
+//        }
+//
+//        return userInt;
+//    }
+
     public int getInt() {
         String userInput = scanner.nextLine();
         if(userInput.matches(".*\\d.*")){
@@ -51,6 +65,15 @@ public class Input {
         }
 
     }
+
+//    public int getInt() throws Exception {
+//        String userInput = scanner.nextLine();
+//        if(!userInput.matches(".*\\d.*")){
+//            throw new Exception("That is not an integer.");
+//        }
+//        return Integer.parseInt(userInput);
+//
+//    }
 
     public double getDouble(double min, double max) {
         System.out.print("Enter a double between " + min + " and " + max + ": ");
@@ -70,6 +93,20 @@ public class Input {
         }
     }
 
+//    public double getDouble(double min, double max) throws Exception {
+//        System.out.print("Enter a double between " + min + " and " + max + ": ");
+//        String userInput = scanner.nextLine();
+//        if(!userInput.matches(".*\\d.*")){
+//            throw new Exception("That is not a double.");
+//        }
+//        double userDouble = Double.parseDouble(userInput);
+//        if (userDouble < min || userDouble > max){
+//            throw new Exception("That is not in range.");
+//        }
+//
+//        return userDouble;
+//    }
+
     public double getDouble() {
         String userInput = scanner.nextLine();
         if(userInput.matches(".*\\d.*")){
@@ -79,6 +116,15 @@ public class Input {
             return getDouble();
         }
     }
+
+//    public double getDouble() throws Exception {
+//        String userInput = scanner.nextLine();
+//        if(!userInput.matches(".*\\d.*")){
+//            throw new Exception("That is not a double.");
+//        }
+//        return Double.parseDouble(userInput);
+//
+//    }
 
 }
 
