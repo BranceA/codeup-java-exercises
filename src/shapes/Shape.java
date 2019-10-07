@@ -1,6 +1,7 @@
 package shapes;
+import java.io.Serializable;
 
-public class Shape {
+public class Shape implements Serializable {
 
     protected double width;
 

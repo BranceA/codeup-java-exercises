@@ -126,6 +126,16 @@ public class Input {
 //
 //    }
 
+//    public double getBinary() {
+//        String userInput = scanner.nextLine();
+//        if(userInput.matches(".*\\d.*")){
+//            return Integer.valueOf(userInput, 2);
+//        } else {
+//            System.out.println("That isn't a binary number. Try again.");
+//            return getDouble();
+//        }
+//    }
+
 }
 
 //    String getString()
@@ -134,3 +144,5 @@ public class Input {
 //    int getInt()
 //    double getDouble(double min, double max)
 //    double getDouble()
+
+//    Integer valueOf(String str, int base);

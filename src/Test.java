@@ -1,3 +1,11 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import util.Input;
 
@@ -31,7 +39,7 @@ public class Test {
 
 //        test();
 
-        fizzBuzz("");
+//        fizzBuzz("");
 
 //        Person dude = new Person("Chuck");
 
@@ -58,6 +66,20 @@ public class Test {
 //        for(String name : names){
 //            System.out.println(name.equalsIgnoreCase("chris"));
 //        }
+//
+//        Path dataDirectory = Paths.get("src", "Test.java");
+//
+//        if (!Files.exists(dataDirectory)) {
+//
+//            try {
+//                Files.createDirectories(dataDirectory);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//        }
+
+        System.out.println(getFileContents("src/shapes/test.txt"));
 
     }
 
@@ -101,6 +123,21 @@ public class Test {
             currentOutput = currentOutput.substring(2);
             System.out.println(currentOutput);
         }
+
+    }
+
+    public static List<String> getFileContents(String filePath){
+        Path p = Paths.get(filePath);
+
+        List<String> lines = new ArrayList<>();
+
+        try {
+            lines = Files.readAllLines(p);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return lines;
 
     }
 

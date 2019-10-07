@@ -1,6 +1,7 @@
 package shapes;
+import java.io.Serializable;
 
-abstract class Quadrilateral extends Shape implements Measurable{
+abstract class Quadrilateral extends Shape implements Measurable, Serializable{
 
     protected double length;
     protected double width;
