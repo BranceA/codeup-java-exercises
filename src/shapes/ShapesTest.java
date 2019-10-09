@@ -18,6 +18,8 @@ public class ShapesTest implements Serializable {
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
 
+        Quadrilateral newTest = new Square(5);
+
 //        Object objectIO ;
 //        objectIO.WriteObjectToFile("text.txt", myShape);
 //
